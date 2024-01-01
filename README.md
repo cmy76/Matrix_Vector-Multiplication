@@ -12,6 +12,6 @@
  ![image](https://github.com/cmy76/Matrix_Vector-Multiplication/blob/main/SSA.png)
 ### RMCM 模块
 一个RMCM模块包含一个PCM和64个SSA。这样的结构可以用于计算阶数为64的方阵和一个长度为64的向量的乘法。通过适当的扩展，可以实现对256阶矩阵和长为64的向量的乘法。
-
+ ![image](https://github.com/cmy76/Matrix_Vector-Multiplication/blob/main/RMCM1.png)
 ## 说明
 本项目参考了论文《ICARUS:Specialized Architecture for Neural Radiance Fields Rendering》中的乘法器实现
