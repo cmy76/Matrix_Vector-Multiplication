@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../led.gen/sources_1/ip/mult_gen_2/sim/mult_gen_2.vhd" \
+
+# Do not sort compile order
+nosort

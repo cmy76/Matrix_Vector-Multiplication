@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../led.srcs/sources_1/new/pcm.v" \
+"../../../../led.srcs/sources_1/new/ssa.v" \
+
+sv xil_defaultlib  \
+"../../../../led.srcs/sources_1/new/RMCM.sv" \
+"../../../../led.srcs/sources_1/new/subMVM.sv" \
+"../../../../led.srcs/sim_1/new/subMVM_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
