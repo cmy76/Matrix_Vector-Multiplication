@@ -1,4 +1,4 @@
-# Matrix_Mul
+# MVM
  一个矩阵向量乘法器的System Verilog实现
 ## 介绍
  本仓库是一个基于Verilog和System Verilog的矩阵乘法器实现。该乘法器采用了Reconfigurable Multiple Constant Multiplier (RMCM) 结构，包括三个常数乘法IP核、多个Select-Shift-Add (SSA) 模块以及一个Pre-Compute (PCM) 模块。
