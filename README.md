@@ -6,7 +6,7 @@
 ## 模块
 ### PCM模块
  PCM (Pre-Compute Module)模块使用三个常数乘法器IP核，预先计算了1x、3x、5x、7x的结果。这些计算结果将用于后续的矩阵乘法操作。
-
+ ![image](https://github.com/cmy76/Matrix_Vector-Multiplication/blob/main/RMCM.png)
 ### SSA模块
  SSA(Select-Shift Add)模块接受PCM模块的计算结果和权重作为输入。权重是一个9位的数据，其中第一个位为符号位，其余8位被拆分为高4位和低4位，分别用于计算移位。例如，如果权重为-78（二进制表示为1_0100_1110），则将1x的高八位左移6位，7x左移1位，然后相加后拼接符号位即可得到-78x。
  ![image](https://github.com/cmy76/Matrix_Vector-Multiplication/blob/main/SSA.png)
