@@ -16,5 +16,7 @@
 ### MVM顶层文件
 仍未完全实现
  ![image](https://github.com/cmy76/Matrix_Vector-Multiplication/blob/main/MVM.png)
+## 使用
+直接使用Vivado打开Matrix_Mul.xpr文件即可
 ## 说明
 本项目参考了论文《ICARUS:Specialized Architecture for Neural Radiance Fields Rendering》中的乘法器实现
