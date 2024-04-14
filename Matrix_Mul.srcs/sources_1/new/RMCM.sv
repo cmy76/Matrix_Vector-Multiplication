@@ -43,7 +43,7 @@
 
 
 module RMCM(
-    input           [8:0]  weight[63:0],
+    input           [8:0]   weight[63:0],
     input           [31:0]  x,
     
     input                   clk,

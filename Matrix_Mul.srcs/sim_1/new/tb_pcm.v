@@ -44,16 +44,19 @@ reg [31:0] x;
   initial begin
     // Initialize inputs
     x = 32'h0000_0001;
-    clk = 0;
-    rst_n = 1;
+    clk = 1;
+    rst_n = 0;
     enable = 1;
 
     // Apply reset
-    rst_n = 0;
     #10;
     rst_n = 1;
 
     // Toggle clock
     forever #5 clk = ~clk;
+  end
+  
+  always #10 begin
+       x = x + 1;
   end
 endmodule

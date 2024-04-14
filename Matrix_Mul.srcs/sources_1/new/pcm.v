@@ -30,23 +30,23 @@ module pcm(
     output          [31:0]  x5,
     output          [31:0]  x7
     );
+    reg             [31:0]  x1_reg;
+    reg             [31:0]  x_reg;
+    
     
     assign x1 = x;
     
     mult_gen_0 mult0 (
-        .CLK(clk),  // input wire CLK
         .A(x),      // input wire [31 : 0] A
         .P(x3)      // output wire [33 : 0] P
     );
     
     mult_gen_1 mult1 (
-        .CLK(clk),  // input wire CLK
         .A(x),      // input wire [31 : 0] A
         .P(x5)      // output wire [34 : 0] P
     );
     
     mult_gen_2 mult2 (
-        .CLK(clk),  // input wire CLK
         .A(x),      // input wire [31 : 0] A
         .P(x7)      // output wire [34 : 0] P
     );

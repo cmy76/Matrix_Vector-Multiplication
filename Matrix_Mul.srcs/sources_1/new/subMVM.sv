@@ -27,7 +27,8 @@ module subMVM(
     input                   clk,
     input                   rst_n,
     
-    output          [31:0]  y[63:0]
+    output          [31:0]  y[63:0],
+    output          reg     valid
     );
     
     reg             [31:0]  result[63:0];
@@ -63,4 +64,17 @@ module subMVM(
         .partial_p(partial_p)
     );
     assign y = result;
+    always@(posedge clk or negedge rst_n) begin
+        if(~rst_n) begin
+            valid <= 0;
+        end
+        else begin
+            if(count == 6'd63) begin
+                valid <= 1;
+            end
+            else begin
+                valid <= 0;
+            end
+        end
+     end
 endmodule

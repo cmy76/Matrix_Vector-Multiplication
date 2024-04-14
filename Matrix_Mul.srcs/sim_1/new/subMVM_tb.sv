@@ -29,6 +29,7 @@ module subMVM_tb;
   reg clk;
   reg rst_n;
   wire [31:0] y[63:0];
+  wire          valid;
 
   // Instantiate the subMVM module
   subMVM uut (
@@ -36,12 +37,13 @@ module subMVM_tb;
     .weight(weight),
     .clk(clk),
     .rst_n(rst_n),
-    .y(y)
+    .y(y),
+    .valid(valid)
   );
 
   // Clock generation
   initial begin
-    clk = 0;
+    clk = 1;
     forever #5 clk = ~clk;
   end
 
@@ -50,7 +52,7 @@ module subMVM_tb;
     // Initialize inputs
     rst_n = 1;
     for (int i = 0; i < 64; i = i + 1) begin
-      x[i] = i * 10; // Modify this initialization as needed
+      x[i] = i * 1; // Modify this initialization as needed
       for (int j = 0; j < 64; j = j + 1) begin
         weight[i][j] = i + j; // Modify this initialization as needed
       end
